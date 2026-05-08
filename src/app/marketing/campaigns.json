@@ -1,0 +1,14 @@
+{
+  "hsr": {
+    "enabled": true,
+    "start": "2026-05-01T00:00:00.000Z",
+    "end": "2026-12-31T23:59:59.000Z",
+    "name": "HSR Local Campaign",
+    "notes": "Localised campaign for HSR micro-market; toggle or change dates to control rollout",
+    "abTest": {
+      "enabled": true,
+      "variants": ["control", "urgency", "premium"],
+      "weights": [0.34, 0.33, 0.33]
+    }
+  }
+}
