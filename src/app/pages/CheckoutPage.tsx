@@ -130,7 +130,7 @@ export default function CheckoutPage() {
         </div>
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[#EDE5D8] px-4 py-4">
+      <div className="fixed bottom-[76px] left-0 right-0 z-50 bg-white border-t border-[#EDE5D8] px-4 py-4 lg:bottom-0">
         <div className="mx-auto flex max-w-[1200px] items-center justify-between">
           <div>
             <p className="text-[12px] text-[#9A8570]">Total</p>

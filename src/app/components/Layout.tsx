@@ -30,16 +30,12 @@ export function Layout() {
       <aside className="hidden lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-72 lg:flex-col lg:border-r lg:border-[#E8DED0] lg:bg-white/75 lg:backdrop-blur-xl lg:px-5 lg:py-6 lg:overflow-y-auto lg:h-screen lg:pb-24">
         <div className="rounded-[28px] bg-[#2C1A0E] px-5 py-5 text-white shadow-[0_24px_60px_rgba(44,26,14,0.16)]">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/12">
-              <Sparkles size={18} />
-            </div>
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.32em] text-[#F0C4B4] font-semibold">
-                Slikk Spaces
-              </p>
-              <p className="text-[12px] text-white/70">
-                Web commerce for room glow-ups
-              </p>
+            <div className="flex h-11 w-36 items-center justify-start">
+              <img
+                src="/slikk_logo.png"
+                alt="Slikk"
+                className="h-9 object-contain"
+              />
             </div>
           </div>
           <p className="mt-4 text-[14px] leading-relaxed text-white/80">
@@ -111,16 +107,12 @@ export function Layout() {
       <div className="lg:pl-72">
         <div className="mx-auto min-h-screen w-full max-w-[1600px] px-4 pb-[88px] pt-4 sm:px-6 lg:px-8 lg:pb-10">
           <div className="hidden lg:flex items-center justify-between rounded-[28px] border border-white/70 bg-white/70 px-5 py-4 backdrop-blur-xl shadow-[0_24px_60px_rgba(56,36,17,0.08)] mb-5">
-            <div>
-              <p className="text-[11px] uppercase tracking-[0.32em] text-[#C4704F] font-semibold">
-                Slikk Spaces
-              </p>
-              <h1
-                className="mt-1 text-[20px] font-semibold text-[#2C1A0E]"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                Home decor for quick room glow-ups
-              </h1>
+            <div className="flex items-center">
+              <img
+                src="/slikk_logo.png"
+                alt="Slikk"
+                className="h-8 object-contain"
+              />
             </div>
             <div className="flex items-center gap-3 text-[12px] text-[#7A5C4A]">
               <span className="rounded-full bg-[#FFF3ED] px-3 py-2 font-semibold text-[#C4704F]">

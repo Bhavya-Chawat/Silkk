@@ -407,17 +407,17 @@ export default function ProductDetailPage() {
       <div className="h-32" />
 
       {/* Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#EDE5D8] px-4 py-3 shadow-[0_-10px_30px_rgba(56,36,17,0.08)] lg:bottom-0 lg:left-[288px] lg:right-0 lg:px-8">
-        <div className="mx-auto flex max-w-[1200px] gap-3">
-          <div className="flex gap-3">
+      <div className="fixed bottom-[76px] left-0 right-0 z-40 bg-white border-t border-[#EDE5D8] px-4 py-3 shadow-[0_-10px_30px_rgba(56,36,17,0.08)] lg:bottom-0 lg:left-[288px] lg:right-0 lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="flex w-full flex-col gap-3 sm:flex-row">
             <button
-              className="flex-1 border-2 border-[#C4704F] text-[#C4704F] py-3.5 rounded-2xl text-[14px] font-semibold"
+              className="w-full border-2 border-[#C4704F] text-[#C4704F] py-3.5 rounded-2xl text-[14px] font-semibold sm:flex-1"
               onClick={() => navigate("/app/cart")}
             >
               Try & Buy
             </button>
             <button
-              className={`flex-[2] py-3.5 rounded-2xl text-[14px] font-semibold transition-all ${
+              className={`w-full py-3.5 rounded-2xl text-[14px] font-semibold transition-all sm:flex-[2] ${
                 added ? "bg-[#7A9E7E] text-white" : "bg-[#C4704F] text-white"
               }`}
               onClick={handleAddToCart}

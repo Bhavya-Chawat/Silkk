@@ -1,11 +1,9 @@
+# Slikk
 
-  # Review attached idea
+This is the Slikk home decor experience, adapted from the original Figma concept and branded for the Slikk storefront.
 
-  This is a code bundle for Review attached idea. The original project is available at https://www.figma.com/design/EQ4rpZOvS8TywUuNcxHqfB/Review-attached-idea.
+## Running the code
 
-  ## Running the code
+Run `npm i` to install the dependencies.
 
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+Run `npm run dev` to start the development server.

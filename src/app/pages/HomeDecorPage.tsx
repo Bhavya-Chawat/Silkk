@@ -55,6 +55,15 @@ const bundleProducts = products.slice(0, 4);
 export default function HomeDecorPage() {
   const navigate = useNavigate();
 
+  const categories = [
+    { title: "Bedroom", slug: "bedroom", image: IMAGES.neutralBedroom },
+    { title: "Lighting", slug: "lighting", image: IMAGES.decorativeLamp },
+    { title: "Quirky", slug: "quirky", image: IMAGES.softGirlRoom },
+    { title: "Living Room", slug: "living-room", image: IMAGES.cozyBedroom },
+  ];
+
+  const trending = products.slice(0, 8);
+
   return (
     <div
       className="min-h-screen bg-[#FAF7F2]"
@@ -114,6 +123,91 @@ export default function HomeDecorPage() {
               Try & Buy Available
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Category Grid & Social Proof */}
+      <div className="px-4 mt-4 grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+        <div className="col-span-2">
+          <h3 className="text-[15px] font-semibold text-[#2C1A0E] mb-3">
+            Categories
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {categories.map((c) => (
+              <button
+                key={c.slug}
+                onClick={() => navigate(`/app/products?category=${c.slug}`)}
+                className="flex flex-col items-center gap-2 bg-white rounded-2xl p-3 shadow-sm"
+              >
+                <div className="w-16 h-16 rounded-xl overflow-hidden">
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="text-[12px] font-medium text-[#2C1A0E]">
+                  {c.title}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="col-span-1">
+          <div className="rounded-2xl bg-white p-4 shadow-sm">
+            <p className="text-[12px] text-[#7A5C4A]">Local Social Proof</p>
+            <p className="text-[16px] font-bold text-[#2C1A0E] mt-1">
+              1,200 people in HSR bought this week
+            </p>
+            <p className="text-[11px] text-[#9A8570] mt-2">
+              Hyper-local nudge: trending in your neighbourhood.
+            </p>
+            <div className="mt-3">
+              <button
+                className="w-full rounded-xl bg-[#C4704F] text-white py-2 text-[13px] font-semibold"
+                onClick={() => navigate("/app/products")}
+              >
+                Shop Trending
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trending Now Strip */}
+      <div className="px-4 mt-6">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-[15px] font-semibold text-[#2C1A0E]">
+            Trending Now
+          </h3>
+          <button
+            className="text-[11px] text-[#C4704F] font-semibold"
+            onClick={() => navigate("/app/products")}
+          >
+            See all
+          </button>
+        </div>
+        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+          {trending.map((p) => (
+            <div
+              key={p.id}
+              className="flex-shrink-0 w-[140px] bg-white rounded-2xl p-2 shadow-sm cursor-pointer"
+              onClick={() => navigate(`/app/product/${p.id}`)}
+            >
+              <div className="h-[90px] rounded-xl overflow-hidden mb-2">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-[11px] text-[#2C1A0E] font-medium line-clamp-2">
+                {p.name}
+              </p>
+              <p className="text-[12px] font-bold text-[#C4704F]">₹{p.price}</p>
+            </div>
+          ))}
         </div>
       </div>
 

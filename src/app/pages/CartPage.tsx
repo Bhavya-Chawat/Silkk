@@ -343,7 +343,7 @@ export default function CartPage() {
 
           <div className="h-32" />
 
-          <div className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-[#EDE5D8] px-4 py-3 shadow-[0_-10px_30px_rgba(56,36,17,0.08)] lg:left-[288px] lg:px-8">
+          <div className="fixed bottom-[76px] left-0 right-0 z-40 bg-white border-t border-[#EDE5D8] px-4 py-3 shadow-[0_-10px_30px_rgba(56,36,17,0.08)] lg:bottom-0 lg:left-[288px] lg:px-8">
             <div className="mx-auto flex max-w-[1200px] items-center justify-between mb-2">
               <div>
                 <span className="text-[11px] text-[#9A8570]">Total</span>
